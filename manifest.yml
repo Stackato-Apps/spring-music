@@ -3,6 +3,6 @@ applications:
   instances: 1
   memory: 512M
   path: build/libs/spring-music.war
-  services:
-    ${name}-db:
-      type: postgresql
+#  services:
+#    ${name}-db:
+#      type: postgresql
