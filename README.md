@@ -10,7 +10,10 @@ The application use Spring Java configuration and [bean profiles](https://spring
 ## Running the application on HPE Helion Stackato
 
 ~~~
-stackato push -n
+cf push --no-start
+cf create-service <postgresql-service-name> default spring-music
+cf bind-service spring-music spring-music-db
+cf restart spring-music
 ~~~
 
 ## Running the application locally

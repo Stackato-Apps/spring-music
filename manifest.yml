@@ -1,8 +1,10 @@
 applications:
 - name: spring-music
+  buildpack: https://github.com/cloudfoundry/java-buildpack
   instances: 1
   memory: 512M
   path: build/libs/spring-music.war
-  services:
-    ${name}-db:
-      type: postgresql
+  # services:
+    # postgresql
+    # - spring-music-db
+  stack: cflinuxfs2
